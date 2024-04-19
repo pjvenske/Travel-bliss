@@ -4,19 +4,21 @@
 
 body {
   margin: 0;
+  background-color: #ffffff;
 }
 
+/* NavBar */
 .container {
   margin: 1rem;
   text-align: center;
 }
 
 .nav {
-  background-color: aliceblue;
-  color: black;
+  background-color: #ffadbc;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   gap: 2rem;
   padding: 1rem;
 }
@@ -39,7 +41,8 @@ body {
 }
 
 .nav li.active {
-  background-color: aqua;
+  background-color: #ff7b9c;
+  border-radius: 10px;
 }
 
 .nav li:hover {
@@ -47,6 +50,262 @@ body {
 
 }
 
-.site-title {
-  font-size: 1.5rem;
+.site-title img{
+  width: 200px;
+}
+
+/* Blog */
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+
+.article {
+  height: 400px;
+  margin: 60px;
+  background-color: #ffebd6;
+  border-radius: 10px;
+}
+
+.article-detail {
+  border-radius: 10px;
+  background-color: #ffebd6;
+  min-height: 100px;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: top;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  height: 80vh;
+  width: 80vw;
+  left: calc(50% - 40vw);
+  overflow-y: auto;
+  box-shadow: #736b6b 0px 0px 10px;
+}
+
+.article-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  width: 300px;
+}
+
+
+.article img {
+  width: 300px;
+  max-height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  background-size: cover; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image */
+  overflow: hidden; /* Hide any overflow beyond the container */
+  cursor: pointer;
+}
+
+.article-close {
+  position: absolute;
+  top: 110px;
+  right: 20px;
+  background-color: #ff7b9c;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.banner p{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Home */
+
+/* Slide show */
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide img {
+  width: 800px
+}
+
+.slideshow-container {
+  position: relative;
+
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(86, 114, 138, 0.8);
+  z-index: 100; /* Make buttons appear above the image */
+}
+
+.prev {
+  left: 25%;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 25%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(85, 22, 62, 0.8);
+  cursor: pointer;
+}
+
+.process-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+
+.process {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  padding-left: 300px;
+  padding-right: 300px;
+  text-align: left;
+}
+.content {
+  display: flex;
+  align-items: stretch;
+  justify-content: center; /* This will center the items horizontally */
+}
+
+.content img {
+  margin-top: 25px;
+  margin-right: 25px;
+  width: 450px;
+  object-fit: cover;
+  height: 100%; 
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* This will center the items vertically */
+}
+
+/* Footer */
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffadbc;
+  color: #ffffff;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.logo {
+  order: 1; 
+}
+
+.socials {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  order: 2; 
+}
+
+.socials img {
+  width: 40px;
+}
+
+.socials ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.logo img{
+  width: 200px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .process {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .process {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    align-items: center; /* This will center the items vertically */
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For tablets or small desktops */
+@media (max-width: 1024px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }

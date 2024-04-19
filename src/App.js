@@ -4,6 +4,8 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import Blog from './pages/Blog';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
     case '/about':
       component = <About />
       break
+    case '/blog':
+      component = <Blog />
+      break
   }
   return (
     <>
@@ -25,6 +30,7 @@ function App() {
     <div className='container'>
       {component}
     </div>
+    <Footer />
     </>
   );
 }
