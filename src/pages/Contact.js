@@ -33,6 +33,7 @@ export default function Contact() {
                     </form>
                 </div>
             </div>
+            <div className='space'></div>
         </div>
     )
 }

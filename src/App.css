@@ -267,12 +267,6 @@ body {
 }
 
 .process {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
   padding-left: 300px;
   padding-right: 300px;
   text-align: left;
@@ -280,7 +274,7 @@ body {
 .content {
   display: flex;
   align-items: stretch;
-  justify-content: center; /* This will center the items horizontally */
+  justify-content: center; 
 }
 
 .content img {
@@ -294,7 +288,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* This will center the items vertically */
+  align-items: center; 
 }
 
 /* Footer */
@@ -340,45 +334,132 @@ body {
   width: 200px;
 }
 
+.space {
+  margin: 400px;
+}
+
 /* Responsive styles */
-@media (max-width: 1200px) {
-  .process {
-    padding-left: 150px;
-    padding-right: 150px;
+@media screen and (max-width: 1025px) {
+  .space {
+    margin: 650px;
   }
-}
 
-@media (max-width: 900px) {
-  .process {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 430px) {
   .content {
+    display: flex;
     flex-direction: column;
-    align-items: center; /* This will center the items vertically */
+    justify-content: center;
+    align-items: center; 
   }
 
-  .content img {
+  .article-container {
+    margin: 0;
+  }
+
+  .prev {
+    left: 10%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 0rem;
+    max-width: 430px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav ul {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .site-title img {
+    width: 200px;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .socials ul {
+    display: block;
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    width: 200px; /* adjust as needed */
+  }
+
+  .article {
     width: 100%;
-    height: auto;
+    margin: 0;
+    padding: 0;
   }
-}
 
-/* For tablets or small desktops */
-@media (max-width: 1024px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
+  .article-container {
+    margin: 0;
   }
-}
 
-/* For mobile devices */
-@media (max-width: 430px) {
-  .nav {
+  .process-container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
   }
+
+  .process {
+    padding: 10px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+
+  .prev {
+    left: 5%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 5%;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #ffebd6;
+    border-radius: 10px;
+  }
+
+
 }
